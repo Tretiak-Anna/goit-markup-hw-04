@@ -133,7 +133,16 @@ section {
     background-color: #2E2F42;
     text-align: center;
     padding: 188px 0;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-image: linear-gradient(
+	to bottom, 
+	rgba(46, 47, 66, 0.70), 
+	rgba(46, 47, 66, 0.70)
+  ),
+	url(/images/people-office\ 1.png);
   }
+
   .container .section-one-cont {
     display: inline-flex;
     display: flex;
@@ -293,4 +302,9 @@ section {
     letter-spacing: 0.02em;
     color: #F4F4FD;
     max-width: 264px;
+  }
+
+  .features-icon {
+    
+    background-color: #404BBF;
   }
