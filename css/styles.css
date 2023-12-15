@@ -123,13 +123,42 @@ section {
     ;
   }
  
+
+
   .nav-link {
-    color: #2e2f42;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #404bbf;
+    letter-spacing: 0.32px;
+    text-decoration: none;
     padding: 24px 0;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: block;
+  }
+  .nav-link.current {
+    color: #404bbf;
   }
   .nav-link:hover,
   .nav-link:focus {
-    color: #404BBF;
+    color: #404bbf;
+  }
+  .nav-link:not(:hover) {
+    color: #2e2f42;
+  }
+  .nav-link:hover::after {
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404bbf;
+    content: "";
+    display: block;
+    transform: translateY(20px);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    color: #404bbf;
   }
   .main-text {
     background-color: #2E2F42;
@@ -137,9 +166,11 @@ section {
     padding: 188px 0;
     background-repeat: no-repeat;
     background-size: cover; 
-    background-image:  linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(/images/Dark-bg.png);
-    max-width: 1440px;
-    background-position: center;
+    background-image: linear-gradient(
+	rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+	url(/images/people-office\ 1.jpg);
   }
 
   .container .section-one-cont {
@@ -271,6 +302,7 @@ section {
 
   .portfolio-img{
     position: relative;
+    overflow: hidden;
   }
 
   .overlay {
@@ -281,12 +313,16 @@ section {
     letter-spacing: 0.02em;
     padding: 40px 32px;
     background-color: #4d5ae5;
+    color: #F4F4FD;
     height: 100%;
     width: 100%;
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
   }
-
+  .app-info:hover .portfolio-img .overlay {
+    transform: translateY(0%);
+  }
   .app-info {
     width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -297,12 +333,12 @@ section {
     border-top: none;
   }
   footer {
-    background-color: #2E2F42;
-    color: #F4F4FD;
-    padding: 100px 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: #2e2f42;
   }
 
-  .container footer-cont{
+  .footer-logo-content-wrapper{
     display: flex;
     align-items: baseline;
   }
@@ -409,7 +445,7 @@ height: 112px;
     height: 100%;
     background-color: #4d5ae5;
     border-radius: 50%;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
   }
   .footer-social-link:hover {
