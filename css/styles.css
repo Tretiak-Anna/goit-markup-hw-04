@@ -107,11 +107,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .adress-link:focus{
     color: #404bbf;
   }
-  .link:hover,
-  .link:focus {
-    color: #404BBF;
-    ;
-  }
+  
   .nav-cont {
     display: flex;
     gap: 40px;
@@ -146,7 +142,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: 2px;
     opacity: 0;
   }
- 
+  .nav-link:hover,
+  .nav-link:focus {
+    color: #404BBF;
+  }
   .nav-link:hover:after,
   .nav-link:focus:after,
   .nav-link.current::after {
@@ -167,7 +166,10 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-position: center;
     background-size: cover;
   }
-
+  .link:hover,
+  .link:focus {
+    color: #404BBF;
+  }
   .container .section-one-cont {
     display: inline-flex;
     display: flex;
